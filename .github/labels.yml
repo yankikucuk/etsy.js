@@ -40,6 +40,8 @@
   color: aed5fc
 - name: invalid
   color: e4e669
+- name: 'need more info'
+  color: '80c042'
 - name: performance
   color: 80c042
 - name: permissions
