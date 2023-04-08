@@ -1,5 +1,5 @@
 {
-  "name": "showetsy",
+  "name": "etsy.js",
   "version": "0.0.1",
   "description": "Etsy API wrapper for NodeJS",
   "private": false,
