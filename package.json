@@ -1,7 +1,7 @@
 {
   "name": "etsy.js",
   "version": "0.0.1",
-  "description": "Latest Etsy API wrapper for NodeJS",
+  "description": "Latest Etsy API wrapper for NodeJS.",
   "private": false,
   "main": "./src/index.js",
   "files": [
