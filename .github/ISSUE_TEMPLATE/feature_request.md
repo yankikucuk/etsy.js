@@ -1,11 +1,11 @@
 ---
-
 name: Feature request
 about: Request a feature for the core etsy.js library
 title: ''
 labels: 'type: feature request'
 assignees: ''
 ---
+
 <!--
 If you need help with etsy.js installation or usage, please go to the etsy.js Discord server instead:
   https://discord.gg/xfHymhCkPX

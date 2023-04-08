@@ -1,11 +1,11 @@
 ---
-
 name: Bug report
 about: Report incorrect or unexpected behaviour of etsy.js
 title: ''
 labels: 's: unverified, type: bug'
 assignees: ''
 ---
+
 <!--
 If you need help with etsy.js installation or usage, please go to the etsy.js Community Server instead:
   https://discord.gg/xfHymhCkPX
