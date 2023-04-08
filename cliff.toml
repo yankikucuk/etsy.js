@@ -1,0 +1,61 @@
+[changelog]
+header = """
+# Changelog\n
+All notable changes to this project will be documented in this file.\n
+"""
+body = """
+{% if version %}\
+    # [{{ version | trim_start_matches(pat="v") }}]\
+    {% if previous %}\
+        {% if previous.version %}\
+            (https://github.com/yankikucuk/etsy.js/compare/{{ previous.version }}...{{ version }})\
+        {% else %}
+            (https://github.com/yankikucuk/etsy.js/tree/{{ version }})\
+        {% endif %}\
+    {% endif %} \
+    - ({{ timestamp | date(format="%B %e, %Y") }})
+{% else %}\
+    # [unreleased]
+{% endif %}\
+{% for group, commits in commits | group_by(attribute="group") %}
+    ## {{ group | upper_first }}
+    {% for commit in commits %}
+        - {% if commit.breaking %}\
+            [**breaking**] \
+          {% endif %}\
+            {% if commit.scope %}\
+                **{{commit.scope}}:** \
+            {% endif %}\
+            {{ commit.message | upper_first }} ([{{ commit.id | truncate(length=7, end="") }}](https://github.com/yankikucuk/etsy.js/commit/{{ commit.id }}))\
+    {% endfor %}
+{% endfor %}
+"""
+trim = true
+footer = ""
+
+[git]
+conventional_commits = true
+filter_unconventional = true
+commit_parsers = [
+    { message = "^feat", group = "🥳 Features"},
+    { message = "^fix", group = "⚡️ Bug Fixes"},
+    { message = "^docs", group = "📘 Documentation"},
+    { message = "^perf", group = "🏄🏻 Performance"},
+    { message = "^refactor", group = "🪄 Refactor"},
+    { message = "^typings", group = "✏️ Typings"},
+    { message = "^types", group = "✏️ Typings"},
+    { message = ".*deprecated", body = ".*deprecated", group = "🚽 Deprecation"},
+    { message = "^revert", skip = true},
+    { message = "^style", group = "🎨 Styling"},
+    { message = "^test", group = "📐 Testing"},
+    { message = "^chore", skip = true},
+    { message = "^ci", skip = true},
+    { message = "^build", skip = true},
+    { body = ".*security", group = "🔑 Security"},
+]
+filter_commits = true
+tag_pattern = "etsy.js@[0-9]*"
+ignore_tags = ""
+topo_order = true
+date_order = true
+sort_commits = "newest"
