@@ -3,7 +3,6 @@
   <p>
     <a href="https://discord.gg/xfHymhCkPX"><img src="./doc/Etsy.svg" width="600" alt="etsy.js" /></a>
   </p>
-  <br/>
 </div>
 
 # Welcome
