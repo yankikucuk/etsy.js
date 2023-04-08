@@ -2,7 +2,6 @@
   "name": "etsy.js",
   "version": "0.0.1",
   "description": "Latest Etsy API wrapper for NodeJS.",
-  "private": false,
   "main": "./src/index.js",
   "files": [
     "src"
@@ -51,5 +50,6 @@
   "contributors": [
     "ex.codes <kendinikertenkelebek@me.com>"
   ],
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "packageManager": "yarn@3.5.0"
 }
