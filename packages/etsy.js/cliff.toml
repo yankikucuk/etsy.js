@@ -54,8 +54,7 @@ commit_parsers = [
     { body = ".*security", group = "🔑 Security"},
 ]
 filter_commits = true
-tag_pattern = "etsy.js@[0-9]*"
+tag_pattern = "@playerberry/etsy.js@[0-9]*"
 ignore_tags = ""
 topo_order = true
-date_order = true
 sort_commits = "newest"

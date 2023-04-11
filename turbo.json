@@ -1,0 +1,16 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["yarn.lock"],
+  "pipeline": {
+    "serve": {},
+    "test": {},
+    "format": {},
+    "lint": {},
+    "changelog": {
+      "outputs": ["cliff.toml", "CHANGELOG.md"]
+    },
+    "publish": {
+      "dependsOn": ["test", "format", "lint", "changelog"]
+    }
+  }
+}
